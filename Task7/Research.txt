@@ -1,0 +1,26 @@
+Research on Constructors:
+
+Constructors help in software development by:
+1. Object Initialization: Ensuring objects start in valid state
+2. Code Reliability: Preventing uninitialized object usage
+3. Maintainability: Centralizing initialization logic
+
+Real-world use cases:
+1. Database connections - initialize connection strings
+2. User authentication - set default user roles
+3. Game development - initialize player stats
+
+Resources used:
+- Microsoft C# Documentation
+- Stack Overflow discussions
+- C# Programming Yellow Book
+
+Research on OOP Principles - Encapsulation:
+
+Encapsulation bundles data and methods together, controlling access through access modifiers.
+
+Examples:
+1. Bank Account - balance field private, methods public
+2. Student GPA - private field with public getter
+
+Classes are blueprints, objects are instances.

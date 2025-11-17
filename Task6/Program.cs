@@ -1,9 +1,12 @@
-﻿namespace Task6;
+﻿//get user input
+Console.WriteLine("Enter marks:");
+int marks = int.Parse(Console.ReadLine());
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
-    }
-}
+Console.WriteLine("Enter total:");
+int total = int.Parse(Console.ReadLine());
+
+//lets calculate percentage
+double percentage = (double)marks / total * 100;
+
+//Display result
+Console.WriteLine($"Percentage: {percentage}%");

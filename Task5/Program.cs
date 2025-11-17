@@ -1,10 +1,10 @@
-﻿// Enumm Defination
+﻿
 public enum DayType
 {
     Weekday,
-    Weekend,
+    Weekend
 }
-// record the defination
+
 public record Book(string Title, string Author, double Price);
 
 class Program
@@ -13,28 +13,32 @@ class Program
     {
         Console.WriteLine("Task 5 Enums and Records");
 
-//Enum usage
+        // Fixed: Handle null input
         Console.Write("Enter day: ");
-        string dayInput = Console.ReadLine();
+        string? dayInput = Console.ReadLine();
 
-//check if weekend or weekday
-        DayType daytype = (dayInput.ToLower() == "friday" || dayInput.ToLower() == "saturday")
-            ? DayType.Weekend
-            : DayType.Weekday;
+        if (string.IsNullOrEmpty(dayInput))
+        {
+            Console.WriteLine("No input provided. Using default: Weekday");
+            dayInput = "Monday";
+        }
 
-//Record usage
+        string lowerDay = dayInput.ToLower();
+        DayType daytype = (lowerDay == "friday" || lowerDay == "saturday") 
+            ? DayType.Weekend : DayType.Weekday;
+        Console.WriteLine($"It is: {daytype}");
+
+        Console.WriteLine();
+
+        // Record usage (unchanged - this part is fine)
         Book book1 = new Book("C# Programming", "Kushal Tamang", 29.99);
-
-//Create new record with changes
         Book book2 = book1 with { Title = "Advanced C#", Price = 49.99 };
+        
         Console.WriteLine($"Book1: {book1}");
 
-//Deconstruct record
         var (title, author, price) = book2;
         Console.WriteLine($"Title: {title}");
         Console.WriteLine($"Author: {author}");
         Console.WriteLine($"Price: {price}");
     }
 }
-
-    
