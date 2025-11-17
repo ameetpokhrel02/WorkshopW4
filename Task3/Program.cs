@@ -1,16 +1,15 @@
-﻿// Task 2: Methods & Return Types
-Console.WriteLine("\n=== TASK 2: Methods & Return Types ===");
+﻿// Task 3: Parameter Types
+ParameterDemo paramDemo = new ParameterDemo();
 
-Calculator calc = new Calculator();
-calc.PrintWelcome();
+// By using ref parameter
+int number =5;
+paramDemo.Increase(ref number);
+Console.WriteLine($"After ref: {number};");
 
-// Call Add method
-int sum = calc.Add(5, 3);
-Console.WriteLine($"Addition: {sum}");
+// By using out Parameter
+paramDemo.GetFullName(out string fullName);
+Console.WriteLine($"Out Parameter:{fullName}");
 
-// Call Multiply with both parameters
-int product1 = calc.Multiply(4, 5);
-// Call Multiply with default parameter
-int product2 = calc.Multiply(7);
-Console.WriteLine($"Multiplication 1: {product1}");
-Console.WriteLine($"Multiplication 2: {product2}");
+//By using params parameter
+int totalsum =paramDemo.SumAll(1, 2, 3);
+Console.WriteLine($"Total Sum:{totalsum}");
