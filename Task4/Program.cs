@@ -1,9 +1,11 @@
-﻿namespace Task4;
+﻿// Task4 : Constructors
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
-    }
-}
+Player player1 = new Player();
+player1.playerName ="Default Player";
+player1.level =3;
+player1.health =130;
+player1.DisplayInfo();
+
+//By using parameterized constructor
+Player player2 = new Player("Riya", 10,250);
+player2.DisplayInfo();
