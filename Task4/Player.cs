@@ -1,10 +1,11 @@
 public class Player
 {
-    public String playerName;
+    // initializw with empty string
+    public string playerName = string.Empty;
     public int level;
     public int health;
     
-    // Default Constructor
+    // Default Constructor  
     public Player()
     {
         Console.WriteLine("Default constructor has been called");
@@ -12,11 +13,11 @@ public class Player
     }
     
     // Parameterized constructor
-    public Player(String name, int level, int health)
+    public Player(string playerName, int level, int health)
     {
-        playerName = name;
-        level = level;
-        health = health;
+        this.playerName = playerName;
+        this.level = level;
+        this.health = health;
 
     }
     public void DisplayInfo()
